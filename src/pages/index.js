@@ -1,29 +1,55 @@
+import { graphql } from "gatsby"
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
+import Bio from "../components/Bio"
+import { FlexLayout } from "../components/Card"
+import Experience from "../components/Experience"
+import Hobbies from "../components/Hobbies"
 import Layout from "../components/layout"
+import Post from "../components/Post"
 import Seo from "../components/seo"
+import Skills from "../components/Skills"
+import AllProjects from "../partials/projects"
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
-  </Layout>
-)
+const IndexPage = ({ data }) => {
+  const {
+    allStrapiBlogs: { nodes },
+  } = data
+
+  return (
+    <Layout>
+      <Seo title="Home" />
+      <Bio />
+      <FlexLayout gap="1rem">
+        <FlexLayout column>
+          <Skills column />
+          <Hobbies column />
+        </FlexLayout>
+        <FlexLayout column>
+          <Experience column />
+          <Post column info={nodes[0]} />
+        </FlexLayout>
+      </FlexLayout>
+      <AllProjects />
+    </Layout>
+  )
+}
+export const query = graphql`
+  {
+    allStrapiBlogs(limit: 1, sort: { fields: created_at }) {
+      nodes {
+        title
+        extract
+        slug
+        image {
+          formats {
+            small {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
