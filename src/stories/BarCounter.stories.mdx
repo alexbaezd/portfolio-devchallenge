@@ -1,0 +1,21 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs"
+import BarCounter from "../components/BarCounter"
+import { H3 } from "../components/Texts"
+import { Button } from "../components/Button"
+
+<Meta title="Components/BarCounter" component={BarCounter} />
+
+# Bar Counter
+
+<Preview withToolbar>
+  <Story name="BarCounter">
+    <BarCounter>
+      <H3>
+        Other Projects <span>(6)</span>
+      </H3>
+      <Button outline>HTML</Button>
+      <Button outline>CSS</Button>
+      <Button outline>JS</Button>
+    </BarCounter>
+  </Story>
+</Preview>

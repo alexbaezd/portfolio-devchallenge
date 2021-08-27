@@ -20,4 +20,5 @@ export const Image = styled.img`
   border-radius: 12px;
   width: 100%;
   max-width: 350px;
+  max-height: 280px;
 `

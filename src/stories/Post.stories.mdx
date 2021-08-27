@@ -1,0 +1,33 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs"
+import Post from "../components/Post"
+
+export const Template = args => <Post {...args} />
+
+<Meta title="Components/Post" component={Post} />
+
+# Post
+
+<Canvas>
+  <Story
+    name="Post"
+    args={{
+      column: true,
+      info: {
+        id: "Post_1",
+        title: "How to organize your CSS",
+        slug: "how-to-organize-your-css",
+        extract:
+          "In this article I tell the story about Proin eu justo sit amet lacus bibendum tincidunt. Vivamus non volutpat nisl, a luctus mi. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.",
+        image: {
+          formats: {
+            small: {
+              url: "https://res.cloudinary.com/dcxrmkmqs/image/upload/v1628904227/small_css_0792032409.jpg",
+            },
+          },
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

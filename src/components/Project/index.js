@@ -14,6 +14,8 @@ const Project = ({ info, column, ...props }) => {
           <Image
             src={info.image.formats.medium.url}
             alt={`demo-project-${info.title}`}
+            width="750"
+            height="469"
           />
         </Link>
         <Section column={column}>

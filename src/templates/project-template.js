@@ -10,7 +10,7 @@ const ProjectPage = ({ data: { project } }) => {
   return (
     <Layout>
       <article>
-        <PostImage src={project.image.formats.large.url} alt={project.title} />
+        <PostImage src={project.image.formats.medium.url} alt={project.title} />
         {project.content && (
           <ReactMarkdown rehypePlugins={[rehypeRaw]}>
             {project.content}
@@ -28,7 +28,7 @@ export const query = graphql`
       content
       image {
         formats {
-          large {
+          medium {
             url
           }
         }

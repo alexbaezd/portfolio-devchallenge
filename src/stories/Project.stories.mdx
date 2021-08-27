@@ -1,0 +1,39 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs"
+import Project from "../components/Project"
+
+export const Template = args => <Project {...args} />
+
+<Meta title="Components/Project" component={Project} />
+
+# Project
+
+<Canvas>
+  <Story
+    name="Project"
+    args={{
+      column: false,
+      info: {
+        id: "Projects_1",
+        title: "Edie Homepage",
+        slug: "edie-homepage",
+        demo: "https://alexbaezd.github.io/edie-homepage/",
+        extract: "Solution for a challenge from Devchallenges.io.",
+        link: "https://github.com/alexbaezd/edie-homepage",
+        featured: true,
+        image: {
+          formats: {
+            medium: {
+              url: "https://res.cloudinary.com/dcxrmkmqs/image/upload/v1628904300/medium_eddie_226026795d.jpg",
+            },
+          },
+        },
+        tags: [
+          { id: 1, name: "css" },
+          { id: 2, name: "html" },
+        ],
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

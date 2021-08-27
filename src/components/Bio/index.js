@@ -40,6 +40,7 @@ const Bio = ({ column, ...props }) => {
         <GatsbyImage
           image={getImage(bio_info.image.url.childImageSharp)}
           width={270}
+          height={270}
           quality={70}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt={`avatar-${bio_info.name}`}

@@ -1,0 +1,51 @@
+import { Meta, Story, Preview, Canvas } from "@storybook/addon-docs"
+import { action } from "@storybook/addon-actions"
+import { Button } from "../components/Button"
+import { Paragraph } from "../components/Texts"
+
+export const Template = args => <Button {...args}>{args.children}</Button>
+
+<Meta title="Components/Buttons" component={Button} />
+
+# Buttons
+
+Buttons are used to trigger actions within an application.
+
+## Usage
+
+Buttons are used to trigger internal actions within your web applications.
+
+## Primary Button by default
+
+Primary buttons are used as a call to action and indicate the most important action on a page.
+
+<Canvas>
+  <Story
+    name="Primary"
+    args={{
+      outline: false,
+      onClick: action("button-click"),
+      disabled: false,
+      children: "Hello World",
+      size: "medium",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Secondary/Outline Button
+
+<Canvas>
+  <Story
+    name="Outline"
+    args={{
+      outline: true,
+      onClick: action("button-click"),
+      disabled: false,
+      children: "Demo",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

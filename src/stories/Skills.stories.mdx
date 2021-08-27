@@ -1,0 +1,25 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs"
+import Skills from "../components/Skills"
+
+export const Template = args => <Skills {...args} />
+
+<Meta title="Components/Skills" component={Skills} />
+
+# Skills
+
+s
+
+## Usage
+
+Use modals to call the user to action or complete a task.
+
+<Canvas>
+  <Story
+    name="Skills"
+    args={{
+      column: false,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
