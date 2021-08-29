@@ -15,19 +15,17 @@ const Project = ({ info, column, ...props }) => {
             src={info.image.formats.medium.url}
             alt={`demo-project-${info.title}`}
             width="750"
-            height="469"
           />
         </Link>
         <Section column={column}>
-          {info.tags.map(item => (
-            <Small key={item.id}>#{item.name}</Small>
-          ))}
+          {info.tags &&
+            info.tags.map(item => <Small key={item.id}>#{item.name}</Small>)}
           <LinkCustom to={`/project/${info.slug}`}>
             <H4>{info.title}</H4>
           </LinkCustom>
           <Paragraph>{info.extract}</Paragraph>
           <ButtonGroup>
-            <Button as="a" href={info.demo} target="_blank" size="large">
+            <Button as="a" href={info.demo} target="_blank">
               Demo
             </Button>
             <Button as="a" href={info.link} target="_blank" outline>

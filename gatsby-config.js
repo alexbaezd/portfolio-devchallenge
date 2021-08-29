@@ -7,7 +7,7 @@ module.exports = {
     title: `Portfolio | DevChallenge.io`,
     description: `This is a challenge from DevChallenge.io, Portfolio site and fetch data from Strapi & Cloudinary`,
     author: `@alexbaez`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://portfolio-devchallenge.vercel.app/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,7 +16,7 @@ module.exports = {
       options: {
         apiURL: process.env.GATSBY_API_URL,
         queryLimit: 1000,
-        collectionTypes: [`blogs`, `projects`],
+        collectionTypes: [`blogs`, `projects`, `tags`],
         singleTypes: [`bio`, `experiences`, `skills`, `hobbies-certificates`],
       },
     },

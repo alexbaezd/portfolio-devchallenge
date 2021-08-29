@@ -1,22 +1,23 @@
 import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
+import React, { useState } from "react"
 import BarCounter from "../components/BarCounter"
 import { Button } from "../components/Button"
 import { GridColumn } from "../components/Card"
 import Project from "../components/Project"
 import { H3 } from "../components/Texts"
 
-const sortProjectsByFeatured = projects =>
-  projects.filter(project => project.featured === true)
-const sortProjects = projects =>
-  projects.filter(project => project.featured === false)
+const projectsFilterByTag = (tag, array) => {
+  const projectsByTag = array.filter(item => item.name === tag)
+
+  return projectsByTag[0].projects
+}
 
 const AllProjects = () => {
-  const {
-    allStrapiProjects: { nodes: projects },
-  } = useStaticQuery(graphql`
+  const [currentTag, setCurrentTag] = useState("REACT")
+
+  const data = useStaticQuery(graphql`
     {
-      allStrapiProjects(sort: { fields: featured, order: DESC }) {
+      PROJECTS: allStrapiProjects(filter: { featured: { eq: true } }) {
         nodes {
           id
           slug
@@ -38,12 +39,33 @@ const AllProjects = () => {
           }
         }
       }
+      TAGS: allStrapiTags {
+        nodes {
+          id
+          name
+          projects {
+            id
+            slug
+            title
+            featured
+            extract
+            demo
+            link
+            image {
+              formats {
+                medium {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
     }
   `)
 
-  const mainProjects = sortProjectsByFeatured(projects)
-
-  const otherProjects = sortProjects(projects)
+  const mainProjects = data.PROJECTS.nodes
+  const otherProjects = data.TAGS.nodes
 
   return (
     <>
@@ -58,16 +80,21 @@ const AllProjects = () => {
         ))}
       </GridColumn>
       <BarCounter>
-        <H3>
-          Other Projects <span>({otherProjects.length})</span>
-        </H3>
-        <Button outline>HTML</Button>
-        <Button outline>CSS</Button>
-        <Button outline>JS</Button>
+        <H3>Other Projects: {currentTag}</H3>
+        {otherProjects.map(item => (
+          <Button
+            key={item.id}
+            outline
+            size="small"
+            onClick={() => setCurrentTag(item.name)}
+          >
+            {item.name}
+          </Button>
+        ))}
       </BarCounter>
-      {otherProjects.map(item => (
-        <Project key={item.id} info={item} />
-      ))}
+      {projectsFilterByTag(currentTag, otherProjects).map(item => {
+        return <Project key={item.id} info={item} />
+      })}
     </>
   )
 }

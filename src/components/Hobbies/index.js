@@ -32,12 +32,7 @@ const Hobbies = ({ column, ...props }) => {
       <FlexLayout column={column}>
         {hobbiesInfo[0].certificates.map(item => (
           <HobbyCard key={item.id} column={column}>
-            <Image
-              src={item.image.url}
-              width={724}
-              height={278}
-              alt={item.title}
-            />
+            <Image src={item.image.url} width={724} alt={item.title} />
             <H3>{item.title}</H3>
             <Paragraph>{item.description}</Paragraph>
           </HobbyCard>
