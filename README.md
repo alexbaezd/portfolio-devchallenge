@@ -11,11 +11,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://vercel.com/alexbaez/portfolio-devchallenge">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/alexbaezd/portfolio-devchallenge">
       Solution
     </a>
     <span> | </span>
@@ -39,7 +39,7 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](./portfolio-demo.jpg)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
@@ -60,16 +60,12 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 - [Gatsby Source Strapi](https://www.gatsbyjs.com/plugins/gatsby-source-strapi/)
 - [Graphql](https://graphql.org/)
 
-#### Back end
+#### Back end. [Clone this repository](https://github.com/alexbaezd/strapi-portfolio-devchallenge)
 
 - [Strapi](https://strapi.io/)
 - [Heroku](https://www.heroku.com/)
   - [PostgreSQL](https://www.postgresql.org/)
 - [Cloudinary](https://cloudinary.com/)
-
-1. Clone this repository and deploy one clic on Heroku
-
-1. Create a new info on Strapi
 
 ## Features
 
@@ -81,7 +77,7 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
     ```shell
     # Clone repository and install dependencies
-    git clone ---
+    git clone https://github.com/alexbaezd/portfolio-devchallenge.git
 
     cd portfolio
 
@@ -90,13 +86,9 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 1.  **Open the source code and start editing!**
 
-    Create a `.env` file and and `GATSBY_API_URL=your-domain.herokuapp.com`
+    Create a `.env.development` file and add `GATSBY_API_URL=http://localhost:1337`
 
-    **REQUIRED: a Strapi CMS on Heroku**
-
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+    [**REQUIRED: a Strapi CMS**.](https://github.com/alexbaezd/strapi-portfolio-devchallenge)
 
 1.  **Start developing.**
 
@@ -105,6 +97,10 @@ This application/site was created as a submission to a [DevChallenges](https://d
     ```shell
     gatsby develop
     ```
+
+    Your site is now running at `http://localhost:8000`!
+
+    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
 
 ## 🧐 What's inside?
 
@@ -155,10 +151,6 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
 
 ## Contact
 
