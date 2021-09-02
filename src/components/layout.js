@@ -17,20 +17,33 @@ const Container = styled.div`
     padding: 0 1.0875rem 1.45rem;
   }
 `
+const Footer = styled.footer`
+  margin-top: 2rem;
+  text-align: center;
+  & a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.titleColor};
+    font-weight: 600;
+  }
+`
 const Layout = ({ children }) => {
   return (
     <Container>
       <main>{children}</main>
-      <footer
-        style={{
-          marginTop: `2rem`,
-          textAlign: `center`,
-        }}
-      >
+      <Footer>
         © {new Date().getFullYear()}, Built with
         {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
+        <a href="https://www.gatsbyjs.com">Gatsby</a>. {` `}
+        Created by{" "}
+        <a
+          href="https://devchallenges.io/portfolio/alexbaezd"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Alex Báez
+        </a>{" "}
+        - devChallenges.io
+      </Footer>
     </Container>
   )
 }

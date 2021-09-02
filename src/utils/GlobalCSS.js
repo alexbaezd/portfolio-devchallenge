@@ -75,4 +75,9 @@ export const GlobalStyles = createGlobalStyle`
     padding:1rem 0.5rem;
     overflow-y: scroll;
   }
+  a{
+    text-decoration:none;
+    color:${props => props.theme.primaryColor};
+  }
+
 `

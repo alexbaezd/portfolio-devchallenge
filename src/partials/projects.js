@@ -86,6 +86,7 @@ const AllProjects = () => {
             key={item.id}
             outline
             size="small"
+            style={{ fontWeight: currentTag === item.name && "bold" }}
             onClick={() => setCurrentTag(item.name)}
           >
             {item.name}

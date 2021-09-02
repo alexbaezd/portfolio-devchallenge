@@ -6,9 +6,9 @@ import { Card, FlexLayout } from "../Card"
 import { H4, Paragraph, Small } from "../Texts"
 import { ButtonGroup, Image, LinkCustom, Section } from "./styled"
 
-const Project = ({ info, column, ...props }) => {
+const Project = ({ info, column }) => {
   return (
-    <Card column={column} {...props}>
+    <Card column={column}>
       <FlexLayout column={column}>
         <Link to={`/project/${info.slug}`}>
           <Image
@@ -40,5 +40,6 @@ const Project = ({ info, column, ...props }) => {
 
 Project.propTypes = {
   info: PropTypes.object.isRequired,
+  column: PropTypes.bool,
 }
 export default Project

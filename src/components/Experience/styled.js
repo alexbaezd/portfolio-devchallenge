@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const ExperienceCard = styled.div`
+export const ExperienceGrid = styled.div`
   display: grid;
   grid-template-columns: 52px 1fr 1fr;
   grid-template-rows: auto auto auto;

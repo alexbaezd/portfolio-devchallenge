@@ -34,7 +34,7 @@ export const H5 = styled.h5`
 export const Paragraph = styled.p`
   font-size: ${props => props.theme.typeScale.paragraph};
   line-height: 1.5rem;
-  font-weight: ${({ bold }) => (bold === true ? "700" : "400")};
+  font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : "400")};
   margin: 0;
   color: ${({ theme }) => theme.textColor};
 `

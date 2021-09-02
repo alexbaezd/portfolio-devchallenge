@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
         </FlexLayout>
         <FlexLayout column>
           <Experience column />
-          <Post column info={nodes[0]} />
+          <Post column data={nodes[0]} />
         </FlexLayout>
       </FlexLayout>
       <AllProjects />

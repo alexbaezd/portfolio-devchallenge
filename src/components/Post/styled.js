@@ -1,11 +1,11 @@
 import styled from "styled-components"
 import { Card } from "../Card"
 
-export const CardPost = styled(Card)`
+export const CustomCard = styled(Card)`
   padding: 1.37rem 0 1.37rem 1.875rem;
 `
 
-export const GridPost = styled.div`
+export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -27,7 +27,7 @@ export const Extract = styled.div`
       column === true ? "2 / 1 / 3 / 3" : "2 / 1 / 3 / 2"};
   }
 `
-export const ImagePost = styled.img`
+export const Image = styled.img`
   grid-area: 1 / 2 / 2 / 3;
   margin: 0;
   width: 100%;

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Card, GridColumn } from "../Card"
 
-export const SkillsCard = styled(Card)`
+export const CustomCard = styled(Card)`
   max-height: 315px;
 `
 
