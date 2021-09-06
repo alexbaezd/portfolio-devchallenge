@@ -1,23 +1,56 @@
 import { Meta, Story, Canvas } from "@storybook/addon-docs"
-import Skills from "../components/Skills"
+import SkillsCard from "../components/Skills/SkillsCard"
 
-export const Template = args => <Skills {...args} />
+export const Template = args => <SkillsCard {...args} />
 
-<Meta title="Components/Skills" component={Skills} />
+<Meta title="Components/Skills" component={SkillsCard} />
 
 # Skills
 
-s
-
 ## Usage
 
-Use modals to call the user to action or complete a task.
+Skills Component are used to show your skill level.
 
 <Canvas>
   <Story
     name="Skills"
     args={{
       column: false,
+      data: {
+        title: "Front end",
+        skill: [
+          {
+            id: 1,
+            name: "React",
+            percentage: 80,
+          },
+          {
+            id: 2,
+            name: "Vue",
+            percentage: 70,
+          },
+          {
+            id: 3,
+            name: "JavaScript ",
+            percentage: 90,
+          },
+          {
+            id: 4,
+            name: "CSS",
+            percentage: 70,
+          },
+          {
+            id: 5,
+            name: "Redux",
+            percentage: 70,
+          },
+          {
+            id: 6,
+            name: "Next",
+            percentage: 60,
+          },
+        ],
+      },
     }}
   >
     {Template.bind({})}

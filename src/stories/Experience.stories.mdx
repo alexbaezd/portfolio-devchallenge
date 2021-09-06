@@ -1,23 +1,54 @@
 import { Meta, Story, Canvas } from "@storybook/addon-docs"
-import Experience from "../components/Experience"
+import ExperiencesCard from "../components/Experience/ExperiencesCard"
 
-export const Template = args => <Experience {...args} />
+export const Template = args => <ExperiencesCard {...args} />
 
-<Meta title="Components/Experience" component={Experience} />
+<Meta title="Components/Experience" component={ExperiencesCard} />
 
-# Skills
+# Experience
 
-s
-
-## Usage
-
-Use modals to call the user to action or complete a task.
+Show details about your past and current jobs.
 
 <Canvas>
   <Story
     name="Experience"
     args={{
       column: false,
+      data: {
+        title: "Experiences",
+        experience: [
+          {
+            id: 1,
+            job: "Front-end developer",
+            description:
+              "Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.",
+            date: "Feb 2020 - Current",
+            logo: {
+              url: "https://res.cloudinary.com/dcxrmkmqs/image/upload/v1628898418/adidas_logo_7f71afa4f0_edc0004ba0.png",
+            },
+          },
+          {
+            id: 3,
+            job: "Full-stack developer",
+            description:
+              "Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.",
+            date: "Aug 2016 - Feb 2019",
+            logo: {
+              url: "https://res.cloudinary.com/dcxrmkmqs/image/upload/v1628898451/volkswagen_vw_logo_767c0a84d2_a9def5c611.png",
+            },
+          },
+          {
+            id: 2,
+            job: "Junior front-end developer",
+            description:
+              "Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.",
+            date: "Jun 2015 - Aug 2016",
+            logo: {
+              url: "https://res.cloudinary.com/dcxrmkmqs/image/upload/v1628898481/aeromexico_lgo_1c83ee50bf_3e5d821a7f.png",
+            },
+          },
+        ],
+      },
     }}
   >
     {Template.bind({})}

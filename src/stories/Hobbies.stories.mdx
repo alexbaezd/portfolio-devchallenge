@@ -1,23 +1,48 @@
 import { Meta, Story, Canvas } from "@storybook/addon-docs"
-import Hobbies from "../components/Hobbies"
+import HobbiesCard from "../components/Hobbies/HobbiesCard"
 
-export const Template = args => <Hobbies {...args} />
+export const Template = args => <HobbiesCard {...args} />
 
-<Meta title="Components/Hobbies" component={Hobbies} />
+<Meta title="Components/Hobbies" component={HobbiesCard} />
 
-# Skills
+# Hobbies
 
-s
-
-## Usage
-
-Use modals to call the user to action or complete a task.
+Use to show a list of hobbies or certificates.
 
 <Canvas>
   <Story
     name="Hobbies"
     args={{
       column: false,
+      data: {
+        title: "Hobbies",
+        certificates: [
+          {
+            description: "Quisque feugiat malesuada molestie.",
+            id: 1,
+            title: "Travel",
+            image: {
+              url: "https://res.cloudinary.com/dcxrmkmqs/image/upload/v1628898295/travelling_e76b8c1262_f4b206f0b3.jpg",
+            },
+          },
+          {
+            description: "Quisque feugiat malesuada molestie.",
+            id: 2,
+            title: "Gaming",
+            image: {
+              url: "https://res.cloudinary.com/dcxrmkmqs/image/upload/v1628898554/Gaming_9300c94a18_63325ee3fa.jpg",
+            },
+          },
+          {
+            description: "Quisque feugiat malesuada molestie.",
+            id: 3,
+            title: "Piano",
+            image: {
+              url: "https://res.cloudinary.com/dcxrmkmqs/image/upload/v1628904793/piano_094623d6e2.jpg",
+            },
+          },
+        ],
+      },
     }}
   >
     {Template.bind({})}
