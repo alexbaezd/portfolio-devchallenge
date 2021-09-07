@@ -13,6 +13,9 @@
   <h3>
     <a href="https://vercel.com/alexbaez/portfolio-devchallenge">
       Demo
+    </a><span> | </span>
+    <a href="https://portfolio-devchallenge-storybook.netlify.app/">
+      Storybook
     </a>
     <span> | </span>
     <a href="https://github.com/alexbaezd/portfolio-devchallenge">
@@ -41,12 +44,10 @@
 
 ![screenshot](./portfolio-demo.jpg)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+👀 [**Storybook**](https://portfolio-devchallenge-storybook.netlify.app/)
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+![Button](storybook-button.gif)
+![Button](storybook-post.gif)
 
 ### Built With
 
@@ -69,6 +70,7 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 ## Features
 
+![Demo](demo.gif)
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt) was to build an application to complete the given user stories.
 
 ## Quick start
@@ -145,6 +147,12 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 12. **`README.md`**: A text file containing useful reference information about your project.
 
 ## Acknowledgements
+
+- [Visual Testing with Storybook](https://www.gatsbyjs.com/docs/how-to/testing/visual-testing-with-storybook/)
+- [Introduction to Storybook for React](https://storybook.js.org/docs/react/get-started/introduction/)
+- [Build a static blog with Gatsby and Strapi](https://strapi.io/blog/build-a-static-blog-with-gatsby-and-strapi)
+
+### Gatsby
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
 
