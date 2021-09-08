@@ -36,7 +36,7 @@ export const Image = styled.img`
   border-bottom-left-radius: 15px;
   align-self: center;
   @media (min-width: 768px) {
-    height: 100%;
+    height: auto;
     grid-area: ${({ column }) =>
       column === true ? "1 / 2 / 2 / 3" : "1 / 2 / 3 / 3"};
   }
